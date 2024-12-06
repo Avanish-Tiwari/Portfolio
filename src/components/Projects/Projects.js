@@ -1,13 +1,12 @@
-import React from "react";
-import { Container, Row, Col } from "react-bootstrap";
-import ProjectCard from "./ProjectCards";
-import Particle from "../Particle";
-import leaf from "../../Assets/Projects/leaf.png";
-import emotion from "../../Assets/Projects/emotion.png";
-import editor from "../../Assets/Projects/codeEditor.png";
-import chatify from "../../Assets/Projects/chatify.png";
-import suicide from "../../Assets/Projects/suicide.png";
-import bitsOfCode from "../../Assets/Projects/blog.png";
+import React from "react"
+import { Container, Row, Col } from "react-bootstrap"
+import ProjectCard from "./ProjectCards"
+import Particle from "../Particle"
+import foodie from "../../Assets/Projects/foodie.png"
+import focusontoday from "../../Assets/Projects/focusontoday.png"
+import countrylistapi from '../../Assets/Projects/countrylistapi.png'
+
+import bitsOfCode from "../../Assets/Projects/blog.png"
 
 function Projects() {
   return (
@@ -21,76 +20,58 @@ function Projects() {
           Here are a few projects I've worked on recently.
         </p>
         <Row style={{ justifyContent: "center", paddingBottom: "10px" }}>
-          <Col md={4} className="project-card">
+
+        <Col md={4} className="project-card">
             <ProjectCard
-              imgPath={chatify}
+              imgPath={countrylistapi}
               isBlog={false}
-              title="Chatify"
-              description="Personal Chat Room or Workspace to share resources and hangout with friends build with react.js, Material-UI, and Firebase. Have features which allows user for realtime messaging, image sharing as well as supports reactions on messages."
-              ghLink="https://github.com/soumyajit4419/Chatify"
-              demoLink="https://chatify-49.web.app/"
+              title="Country List API"
+              description="Developed a dynamic web application using React.js that
+allows users to explore and retrieve information about countries worldwide. The
+app features search functionality, displays detailed country information
+(population, area, capital, etc.), and is designed to be responsive for optimal use on
+various devices. Deployed on Netlify, the project integrates with a RESTful API for
+real-time data retrieval"
+              ghLink="https://github.com/Avanish-Tiwari/ContryList"
+              demoLink="https://countrieslist-api.netlify.app/"
             />
           </Col>
 
           <Col md={4} className="project-card">
             <ProjectCard
-              imgPath={bitsOfCode}
+              imgPath={focusontoday}
               isBlog={false}
-              title="Bits-0f-C0de"
-              description="My personal blog page build with Next.js and Tailwind Css which takes the content from makdown files and renders it using Next.js. Supports dark mode and easy to write blogs using markdown."
-              ghLink="https://github.com/soumyajit4419/Bits-0f-C0de"
-              demoLink="https://blogs.soumya-jit.tech/"
+              title="Focus On Today"
+              description="Discover the Focus on Today Project, a simple yet
+effective web application built using HTML, CSS, and JavaScript. This project is
+designed to help users prioritise their daily tasks and stay organised. With an
+intuitive interface, users can easily add, edit, and remove tasks, making it a great
+tool for enhancing productivity"
+              ghLink="https://github.com/Avanish-Tiwari/Focus-on-Today"
+              demoLink="https://focusontodayproj.netlify.app/"
             />
           </Col>
 
           <Col md={4} className="project-card">
             <ProjectCard
-              imgPath={editor}
+              imgPath={foodie}
               isBlog={false}
-              title="Editor.io"
-              description="Online code and markdown editor build with react.js. Online Editor which supports html, css, and js code with instant view of website. Online markdown editor for building README file which supports GFM, Custom Html tags with toolbar and instant preview.Both the editor supports auto save of work using Local Storage"
-              ghLink="https://github.com/soumyajit4419/Editor.io"
-              demoLink="https://editor.soumya-jit.tech/"              
+              title="Foodie Hamburger Project"
+              description="Explore the Foodie Hamburger Project, a visually
+engaging web application created using only HTML, CSS, and JavaScript. This
+project showcases a variety of delicious hamburger recipes and provides an
+interactive user experience. Users can easily navigate through the content, making
+it perfect for food enthusiasts and aspiring chefs alike"
+              ghLink="https://github.com/Avanish-Tiwari/Foodie-Hamburger-Project"
+              demoLink="https://foodiehamburgerproject.netlify.app/"
             />
           </Col>
 
-          <Col md={4} className="project-card">
-            <ProjectCard
-              imgPath={leaf}
-              isBlog={false}
-              title="Plant AI"
-              description="Used the plant disease dataset from Kaggle and trained a image classifer model using 'PyTorch' framework using CNN and Transfer Learning with 38 classes of various plant leaves. The model was successfully able to detect diseased and healthy leaves of 14 unique plants. I was able to achieve an accuracy of 98% by using Resnet34 pretrained model."
-              ghLink="https://github.com/soumyajit4419/Plant_AI"
-              demoLink="https://plant49-ai.herokuapp.com/"
-            />
-          </Col>
-
-          <Col md={4} className="project-card">
-            <ProjectCard
-              imgPath={suicide}
-              isBlog={false}
-              title="Ai For Social Good"
-              description="Using 'Natural Launguage Processing' for the detection of suicide-related posts and user's suicide ideation in cyberspace  and thus helping in sucide prevention."
-              ghLink="https://github.com/soumyajit4419/AI_For_Social_Good"
-              // demoLink="https://www.youtube.com/watch?v=dQw4w9WgXcQ&ab_channel=RickAstley" <--------Please include a demo link here
-            />
-          </Col>
-
-          <Col md={4} className="project-card">
-            <ProjectCard
-              imgPath={emotion}
-              isBlog={false}
-              title="Face Recognition and Emotion Detection"
-              description="Trained a CNN classifier using 'FER-2013 dataset' with Keras and tensorflow backened. The classifier sucessfully predicted the various types of emotions of human. And the highest accuracy obtained with the model was 60.1%.
-              Then used Open-CV to detect the face in an image and then pass the face to the classifer to predict the emotion of a person."
-              ghLink="https://github.com/soumyajit4419/Face_And_Emotion_Detection"
-              // demoLink="https://blogs.soumya-jit.tech/"      <--------Please include a demo link here 
-            />
-          </Col>
+          
         </Row>
       </Container>
     </Container>
-  );
+  )
 }
 
-export default Projects;
+export default Projects
