@@ -6,7 +6,6 @@ import foodie from "../../Assets/Projects/foodie.png"
 import focusontoday from "../../Assets/Projects/focusontoday.png"
 import countrylistapi from '../../Assets/Projects/countrylistapi.png'
 
-import bitsOfCode from "../../Assets/Projects/blog.png"
 
 function Projects() {
   return (
