@@ -10,9 +10,9 @@ function AboutCard() {
         <div className="text-justify leading-relaxed font-sans">
   <p>Hello Everyone! 👋</p>
   <p>
-    I am <span className="text-blue-500 font-bold">[Your Name]</span>, a passionate{" "}
+    I am <span className="text-blue-500 font-bold">Avanish Tiwari</span>, a passionate{" "}
     <span className="text-blue-500 font-bold">React Developer</span> from{" "}
-    <strong>[Your Location]</strong>.
+    <strong>Delhi - NCR</strong>.
   </p>
   <p>
     Currently, I specialize in building modern, responsive, and user-friendly web
@@ -35,7 +35,7 @@ function AboutCard() {
               <ImPointRight /> Playing Games
             </li>
             <li className="about-activity">
-              <ImPointRight /> Writing Tech Blogs
+              <ImPointRight /> Learning New Techs
             </li>
             <li className="about-activity">
               <ImPointRight /> Travelling
@@ -43,9 +43,9 @@ function AboutCard() {
           </ul>
 
           <p style={{ color: "rgb(155 126 172)" }}>
-            "Strive to build things that make a difference!"{" "}
+            "Success is the sum of small efforts, repeated day in and day out."{" "}
           </p>
-          <footer className="blockquote-footer">Soumyajit</footer>
+          <footer className="blockquote-footer">Avanish Tiwari</footer>
         </blockquote>
       </Card.Body>
     </Card>
