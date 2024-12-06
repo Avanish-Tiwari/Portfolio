@@ -18,7 +18,7 @@ function Home2() {
               I discovered my passion for programming and have honed my skills
               through dedication and hands-on experience. 🚀
               <br />
-              <br />I am fluent in classics like 
+              <br />I am fluent in classics like &nbsp;
               <i>
                 <b className="purple">JavaScript, React, and Node.js </b>
               </i>
