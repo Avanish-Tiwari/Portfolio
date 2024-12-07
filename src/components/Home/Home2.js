@@ -30,7 +30,7 @@ function Home2() {
               </i>
               <br />
               <br />
-              Whenever possible, I channel my passion into developing robust, responsive products using <b class="purple">React.js</b>, <i><b class="purple">Next.js</b></i>, and frameworks like <b class="purple">Material UI</b> and <b class="purple">Tailwind CSS</b>.
+              Whenever possible, I channel my passion into developing robust, responsive products using <b className="purple">React.js</b>, <i><b className="purple">Next.js</b></i>, and frameworks like <b className="purple">Material UI</b> and <b className="purple">Tailwind CSS</b>.
             </p>
           </Col>
           <Col md={4} className="myAvtar">
