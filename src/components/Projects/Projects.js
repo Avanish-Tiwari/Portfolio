@@ -5,6 +5,8 @@ import Particle from "../Particle"
 import foodie from "../../Assets/Projects/foodie.png"
 import focusontoday from "../../Assets/Projects/focusontoday.png"
 import countrylistapi from '../../Assets/Projects/countrylistapi.png'
+import trackexpense from '../../Assets/Projects/trackexpense.png'
+
 
 
 function Projects() {
@@ -48,6 +50,17 @@ intuitive interface, users can easily add, edit, and remove tasks, making it a g
 tool for enhancing productivity"
               ghLink="https://github.com/Avanish-Tiwari/Focus-on-Today"
               demoLink="https://focusontodayproj.netlify.app/"
+            />
+          </Col>
+
+          <Col md={4} className="project-card">
+            <ProjectCard
+              imgPath={trackexpense}
+              isBlog={false}
+              title="Track Expenses"
+              description="Track Expense App is a web-based application designed to help users manage their personal finances by tracking expenses and setting budgets. The app provides an intuitive interface that simplifies the process of logging daily expenditures and analyzing spending habits."
+              ghLink="https://github.com/Avanish-Tiwari/Track-Expense"
+              demoLink="https://trackexpenseapp.netlify.app/"
             />
           </Col>
 
