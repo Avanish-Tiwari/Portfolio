@@ -1,0 +1,13 @@
+[build]
+  command = "npm run build"
+  publish = "build"
+
+[build.environment]
+  # Opt out of Netlify legacy prerendering behavior.
+  # Netlify warning: "legacy prerendering is being deprecated." 
+  # Depending on your site context you may need one of these flags:
+  #  * NETLIFY_USE_LEGACY_PRERENDERING = "false"
+  #  * NETLIFY_DISABLE_LEGACY_PRERENDERING = "true"
+  # Keep one and remove the other once your Netlify console confirms the exact expected key.
+  NETLIFY_USE_LEGACY_PRERENDERING = "false"
+  NETLIFY_DISABLE_LEGACY_PRERENDERING = "true"
