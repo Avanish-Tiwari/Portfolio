@@ -6,7 +6,7 @@ import foodie from "../Assets/Projects/foodie.png";
 export const profile = {
   name: "Avanish Tiwari",
   shortName: "AT.",
-  role: "React Developer",
+  role: "React & Frontend Developer",
   location: "India",
   experience: "3.5+ years",
   intro:
@@ -17,6 +17,7 @@ export const profile = {
   interests: ["Playing games", "Learning new technologies", "Travelling"],
   skills: [
     "JavaScript",
+    "TypeScript",
     "React",
     "Next.js",
     "Node.js",
@@ -25,11 +26,19 @@ export const profile = {
     "Tailwind CSS",
     "Material UI",
     "PostgreSQL",
+    "Vite",
   ],
   tools: ["Git", "VS Code", "Postman"],
 };
 
 export const projects = [
+  {
+    title: "Private AI",
+    stack: ["React", "Vite", "JavaScript", "Transformers", "WebLLM"],
+    description:
+      "A privacy-focused AI app built with React and Vite, designed for local-first AI experiences with lightweight model integrations and a clean user experience.",
+    github: "https://github.com/Avanish-Tiwari/private-ai",
+  },
   {
     title: "AI TaskFlow",
     stack: ["React", "Node.js", "PostgreSQL", "Groq"],
