@@ -1,7 +1,7 @@
-import countryList from "../assets/projects/countrylistapi.png";
-import focusOnToday from "../assets/projects/focusontoday.png";
-import trackExpense from "../assets/projects/trackexpense.png";
-import foodie from "../assets/projects/foodie.png";
+import countryList from "../Assets/Projects/countrylistapi.png";
+import focusOnToday from "../Assets/Projects/focusontoday.png";
+import trackExpense from "../Assets/Projects/trackexpense.png";
+import foodie from "../Assets/Projects/foodie.png";
 
 export const profile = {
   name: "Avanish Tiwari",
