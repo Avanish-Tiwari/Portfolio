@@ -214,19 +214,33 @@ main {
 .site-header {
   position: sticky;
   top: 0;
-  z-index: 50;
+  z-index: 110;
   width: 100%;
+  background: transparent;
+  border-bottom: 1px solid transparent;
+  transition: border-color var(--duration-normal) var(--ease-spring),
+    box-shadow var(--duration-normal) var(--ease-spring);
+}
+
+/* Pseudo-element keeps blur off the hamburger and out of the fixed drawer. */
+.site-header::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
   background: color-mix(in srgb, var(--bg-canvas) 82%, transparent);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
-  border-bottom: 1px solid transparent;
-  transition: all var(--duration-normal) var(--ease-spring);
+  pointer-events: none;
 }
 
 .site-header.scrolled {
   border-bottom-color: var(--border-subtle);
-  background: color-mix(in srgb, var(--bg-canvas) 94%, transparent);
   box-shadow: 0 4px 20px -2px rgba(0, 0, 0, 0.15);
+}
+
+.site-header.scrolled::before {
+  background: color-mix(in srgb, var(--bg-canvas) 94%, transparent);
 }
 
 .header-container {
@@ -2198,12 +2212,14 @@ main {
     display: flex;
     align-items: center;
     gap: 0.5rem;
+    position: relative;
+    z-index: 2;
   }
 
   .site-nav {
     display: none;
     position: fixed;
-    top: 0;
+    top: 4.5rem;
     right: 0;
     bottom: 0;
     width: min(320px, 85vw);
