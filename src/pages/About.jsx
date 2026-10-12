@@ -1,4 +1,5 @@
 import { profile } from "../data/profile.js";
+import DailyQuote from "../components/DailyQuote.jsx";
 import {
   IconSparkles,
   IconBriefcase,
@@ -54,12 +55,7 @@ export default function About() {
             </p>
           </div>
 
-          <div className="personal-quote-card">
-            <p className="quote-text">
-              “Success is the sum of small efforts, repeated day in and day out.”
-            </p>
-            <span className="quote-author">— Personal Creed</span>
-          </div>
+          <DailyQuote />
         </div>
 
         <aside className="about-sidebar">
