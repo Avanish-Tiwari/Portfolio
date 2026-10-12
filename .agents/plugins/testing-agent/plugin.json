@@ -1,0 +1,14 @@
+{
+  "name": "testing-agent",
+  "displayName": "QA & Test Engineering Agent",
+  "version": "1.0.0",
+  "description": "Autonomous testing and QA specialist for writing tests, validating builds, running Vitest suites, and debugging regressions.",
+  "keywords": [
+    "testing",
+    "qa",
+    "vitest",
+    "react-testing-library",
+    "unit-tests",
+    "build-verification"
+  ]
+}
