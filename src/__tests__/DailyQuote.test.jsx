@@ -39,13 +39,23 @@ describe("DailyQuote Component", () => {
   });
 
   it("allows shuffling quotes when shuffle button is clicked", async () => {
+    global.fetch = vi.fn().mockResolvedValue({
+      ok: true,
+      json: async () => ({
+        quote: "Code is like humor. When you have to explain it, it’s bad.",
+        author: "Cory House",
+      }),
+    });
+
     renderWithToast(<DailyQuote />);
 
     const shuffleButton = screen.getByRole("button", { name: /Fetch another quote/i });
     fireEvent.click(shuffleButton);
 
     await waitFor(() => {
-      expect(shuffleButton).toBeInTheDocument();
+      expect(
+        screen.getByText(/Code is like humor/i)
+      ).toBeInTheDocument();
     });
   });
 });
