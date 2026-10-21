@@ -150,6 +150,7 @@ p, span, li {
 .gradient-text {
   background: var(--accent-gradient);
   -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
   display: inline-block;
 }
@@ -686,6 +687,7 @@ main {
   line-height: 1;
   background: var(--accent-gradient);
   -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
   margin-bottom: 0.4rem;
 }
