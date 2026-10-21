@@ -105,7 +105,18 @@ export default function Resume() {
             <div className="cv-contact-items">
               <span>📍 {profile.location}</span>
               <span className="cv-email-item">✉️ {profile.email}</span>
+              {profile.phone && <span>📞 {profile.phone}</span>}
               <span>💼 {profile.experience} Experience</span>
+              {profile.website && (
+                <a
+                  href={profile.website}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="cv-website-link"
+                >
+                  🌐 {profile.website.replace(/^https?:\/\//, "")}
+                </a>
+              )}
             </div>
           </div>
 
@@ -115,11 +126,7 @@ export default function Resume() {
           <section className="cv-section">
             <h3 className="cv-section-title">Professional Summary</h3>
             <p className="cv-summary-text">
-              Senior Frontend & React Developer with 4+ years of hands-on experience
-              architecting responsive, high-performance web applications using React.js,
-              Next.js 15, and modern JavaScript. Proven track record of boosting code
-              reusability by 35% through modular component systems, mentoring developers,
-              and delivering production software for enterprise clients.
+              {profile.summary}
             </p>
           </section>
 
@@ -197,11 +204,75 @@ export default function Resume() {
         </div>
       ) : (
         <div className="pdf-frame-wrapper">
-          <iframe
+          <div className="pdf-preview-toolbar">
+            <div className="pdf-toolbar-info">
+              <span className="pdf-toolbar-dot" aria-hidden="true"></span>
+              <span className="pdf-toolbar-filename">Avanish_Tiwari_Resume.pdf</span>
+            </div>
+            <div className="pdf-toolbar-actions">
+              <a
+                href={profile.resume}
+                target="_blank"
+                rel="noreferrer"
+                className="btn btn-secondary btn-sm"
+                title="Open PDF in a new tab"
+              >
+                <IconExternal size={14} />
+                <span>Open in Tab</span>
+              </a>
+              <a
+                href={profile.resume}
+                download="Avanish_Tiwari_Resume.pdf"
+                className="btn btn-primary btn-sm"
+                title="Download PDF file"
+              >
+                <IconDownload size={14} />
+                <span>Download</span>
+              </a>
+            </div>
+          </div>
+
+          <object
+            data={profile.resume}
+            type="application/pdf"
             className="resume-iframe"
             title={`${profile.name} Resume`}
-            src={`${profile.resume}#view=FitH`}
-          />
+          >
+            <iframe
+              className="resume-iframe"
+              title={`${profile.name} Resume`}
+              src={profile.resume}
+            >
+              <div className="pdf-fallback-state">
+                <div className="pdf-fallback-content">
+                  <IconExternal size={36} className="pdf-fallback-icon" />
+                  <h3 className="pdf-fallback-heading">Inline PDF preview unavailable</h3>
+                  <p className="pdf-fallback-text">
+                    Your browser or device does not support embedded PDF viewing, or has PDF embedding disabled.
+                  </p>
+                  <div className="pdf-fallback-actions">
+                    <a
+                      href={profile.resume}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="btn btn-primary"
+                    >
+                      <IconExternal size={16} />
+                      <span>Open PDF in New Tab</span>
+                    </a>
+                    <a
+                      href={profile.resume}
+                      download="Avanish_Tiwari_Resume.pdf"
+                      className="btn btn-secondary"
+                    >
+                      <IconDownload size={16} />
+                      <span>Download PDF</span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </iframe>
+          </object>
         </div>
       )}
     </div>
